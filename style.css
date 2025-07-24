@@ -27,8 +27,12 @@ body,html{margin:0;padding:0;font-family:Arial,sans-serif}
 body{
     background-color:#f4f4f4;
     /* color:#333; */
-    max-width: 1140px;
-    margin: 0 auto;
+    
+}
+
+header, main, footer{
+     max-width: 1140px;
+     margin: 0 auto;
 }
 
 
@@ -68,7 +72,6 @@ nav ul li a {
     grid-area: title;
 }
 
-
 .hero:nth-child(2) {
     grid-area: description;
 }
@@ -80,7 +83,15 @@ nav ul li a {
 
 .hero{
     display: flex;
+    /* align-items: bottom; */
     margin: 120px 0;
+    /* border: 1px solid #ccc; */
+}
+
+.hero-p1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .hero img{
@@ -94,10 +105,191 @@ nav ul li a {
 .plants-container{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 .plants-container div{
     text-align: center;
 }
+
+
+.flower-lover-section{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 130px;
+    margin-top: 210px
+}
+
+.flower-lover-images{
+    position: relative;
+}
+
+.flower-lover-images-badge {
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 286px;
+    height: 286px;
+}
+.flower-lover-section h2{
+    font-size: 50px;
+}
+
+.flower-lover-section ul li{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+.deals-section h2{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 133px;
+} 
+
+.deals-section-h2-description{
+    font-size: 22px;
+    text-align: center;
+} 
+
+.deal-1{
+    /* grid-area: Deal1; */
+    background-image: url("assets/deal-bloom.png");
+    border: 1px;
+}
+.deal-2{
+    /* grid-area: Deal2; */
+    background-image: url("assets/deal-ana.png");
+}
+.deal-3{
+    /* grid-area: Deal3; */
+    /* height: 100%; */
+    background-image: url("assets/deal-zabo.png");
+}
+.deal-1, .deal-2 {
+    width: 360px;
+    height: 205px;
+}
+
+.deal-1, .deal-2, .deal-3 {
+    display:flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: fill;
+    border-radius: 10px;
+    color: white;
+    
+   }
+
+.deals-container {
+    display: flex;
+    margin-top: 50px;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.deals-container a{
+    font-size: 16px;
+    /* text-decoration: none; */
+    color: white;
+}
+
+
+.deals-left{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.deal-3{
+    width:750px;
+    font-size: 2em;
+}
+.deal-3 a{
+    font-size: 28px;
+}
+
+
+
+footer{
+    margin-top: 120px;
+}
+
+.join-section{
+    background: url("assets/news-letter-bg.png") no-repeat;
+    background-size: cover;
+    height: 533px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.join-section button{
+    width: 185px!important;
+    height: 50px!important;
+}
+
+.join-section form{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+     margin-top: 50px;
+}
+input[type="text"]{
+    width: 640px;
+    height: 50px;
+    padding: 0 20px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+.foot-links{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.foot-links div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.foot-links> :nth-child(1){
+    width: 360px
+}
+
+
+.foot-links> :nth-child(2){
+    width: 85px
+}
+
+
+
+.foot-links> :nth-child(3){
+    width: 128px
+}
+
+
+.foot-links> :nth-child(4){
+    /* width: 216px */
+}
+
+.social-links{
+    display:flex;
+    gap: 12px;
+    flex-direction: row!important;
+}
+.social-links img{
+width: 36px;
+height: 36px;
+/* margin: 0 12px; */
+}
+
+
+
 
 
 /* shared class */
@@ -114,7 +306,27 @@ font-size: 65px;
     font-size: 22px;
 }
 
+button, .button{
+    background-color: #E95A08;
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    font-size: 16px;
+}
 
+
+ nav ul li:first-child a{
+    font-weight: bold;
+    color: #000;
+    /* padding:10px 20px; */
+   }
+nav ul li:last-child {
+    font-weight: 500;
+    color: #000;
+    /* padding:10px 20px; */
+}
 
 @media screen and (max-width: 567px) {
    nav ul li{
@@ -137,8 +349,15 @@ font-size: 65px;
     width: 100%;
     height: auto;
    }
+   .hero-title {
+    width:50%;
+    /* border: 1px solid #ccc; */
+   }
 
    .xl-text{
+    font-size: 24px;
+   }
+   .xxl-text{
     font-size: 24px;
    }
 
@@ -149,6 +368,75 @@ font-size: 65px;
     
 .plants-container{
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 10px;
+}
+
+.plants-container img{
+    width: 100%;
+    height: auto;
+}
+
+
+.flower-lover-images-badge{
+    display:none;
+}
+
+.flower-lover-section{
+ grid-template-columns: repeat(1, 1fr);
+ gap: 20px;
+}
+.flower-lover-images img{
+    width: 100%;
+    height: auto;
+}
+
+.deals-container {
+    flex-direction: column;
+    align-items: center;    
+}
+
+.deals-left{
+    flex-direction: column;
+}
+
+.deal-1, .deal-2, .deal-3 {
+  width: 361px;
+  margin: 0 10px;
+  height: 185px;
+}
+
+
+.deal-3{
+    /* width:750px; */
+    font-size: 20px;
+}
+.deal-3 a{
+    font-size: 16px;
+}
+
+.join-section {
+    height: 390px;
+    
+}
+.join-section div{
+    width: 321px;
+}
+.join-section form{
+margin-top: 25px;
+gap: 0;
+}
+
+input[type="text"]{
+    width: 220px;
+    height: 50px;
+    padding: 0 20px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.join-section button{
+    width: 100px
 }
 
 }
