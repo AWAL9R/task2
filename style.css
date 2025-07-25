@@ -102,6 +102,9 @@ nav ul li a {
 
 .section-plants{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .plants-container{
@@ -149,13 +152,11 @@ margin: 12px;
 }
 
 .flower-lover-section ul li{
-    font-size: 22px;
     margin-bottom: 20px;
 }
 
 
 .deals-section{
-   
     font-size: 50px;
     text-align: center;
     margin-top: 133px;
@@ -163,7 +164,7 @@ margin: 12px;
 } 
 
 .deals-section-h2-description{
-    font-size: 22px;
+    /* font-size: 22px; */
     text-align: center;
      max-width: 888px;
 } 
@@ -427,6 +428,17 @@ nav ul li:last-child a {
 }
 
 
+.plants-container  .plant-name {
+font-size: 16px;
+/* margin: 12px; */
+}
+.plants-container .plant-price{
+    font-size: 16px;
+    /* font-weight: 700;
+    margin: 12px; */
+}
+
+
 .flower-lover-images-badge{
     display:none;
 }
@@ -467,7 +479,7 @@ nav ul li:last-child a {
 
 .deals-section-h2-description{
     max-width: 360px;
-    font-size: 22px;
+    /* font-size: 22px; */
 }
 
 .join-section {
